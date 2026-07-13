@@ -16,6 +16,12 @@
     <div>div 3</div>
 
     <ul class="lista1">
+        <li class="exemplo2">opção 1</li>
+        <li class="exemplo2">opção 2</li>
+        <li>opcao 3</li>
+    </ul>
+
+    <ul class="lista2">
         <li>opção 1</li>
         <li>opção 2</li>
         <li>opcao 3</li>
@@ -29,8 +35,14 @@
             //console.log($('.exemplo1'))
 
             // selecionar elementos por classe de classe específica
-            console.log($('.lista1  .exemplo2'))
+            //console.log($('ul.lista1  .exemplo2'))
 
         // Atuação sobre o array de retorno dos elementos selecionados
+        console.log($('.lista1 .exemplo2'))
+
+        console.log($('.lista1 .exemplo2:first'))
+        console.log($('.lista1 .exemplo2:last'))
+        console.log($('.lista1 .exemplo2:even'))
+        console.log($('.lista1 .exemplo2:odd'))
     </script>
 </html>
