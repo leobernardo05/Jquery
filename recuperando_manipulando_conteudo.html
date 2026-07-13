@@ -6,11 +6,28 @@
         <title>Estudo jQuery</title>
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
         <script>
-           
+           $(document).ready(()=>{
+                console.log('conteudo div 1:', $('#div1').html())
+                console.log('conteudo div 2:', $('#div1').html())
+           })
         </script>
     </head>
 
     <body>
-        
+        <div id="div1" style="border: solid 1px black; width: 150px; height: 150px;">
+            <a href="">teste</a>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Praesentium amet quas sunt unde facere, quo reprehenderit 
+            ex sit consectetur dicta, magnam earum libero! Nam, placeat 
+            adipisci accusantium blanditiis nesciunt nostrum.</p>
+        </div>
+
+        <div id="div2" style="border: solid 1px black; width: 150px; height: 150px;">
+            <a href="">teste</a>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Praesentium amet quas sunt unde facere, quo reprehenderit 
+            ex sit consectetur dicta, magnam earum libero! Nam, placeat 
+            adipisci accusantium blanditiis nesciunt nostrum.</p>
+        </div>
     </body>
 </html>
