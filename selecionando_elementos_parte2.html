@@ -7,15 +7,15 @@
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
-    <input type="text" placeholder="input 1">
+    <input class="exemplo1" type="text" placeholder="input 1">
     <input type="text" placeholder="input 2">
     <input type="text" placeholder="input 3">
 
-    <div>div 1</div>
+    <div class="exemplo1">div 1</div>
     <div>div 2</div>
     <div>div 3</div>
 
-    <ul>
+    <ul class="lista1">
         <li>opção 1</li>
         <li>opção 2</li>
         <li>opcao 3</li>
@@ -24,6 +24,13 @@
 </body>
     <!-- scripts da aplicação  para estudo de jQuery-->
     <script>
-       
+        //combinação de seletores
+            // selecionar elementos por classes de tag específica
+            //console.log($('.exemplo1'))
+
+            // selecionar elementos por classe de classe específica
+            console.log($('.lista1  .exemplo2'))
+
+        // Atuação sobre o array de retorno dos elementos selecionados
     </script>
 </html>
