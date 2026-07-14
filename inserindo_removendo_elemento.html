@@ -8,12 +8,28 @@
         <script>
             //scirpt jQuery    
            $(document).ready(()=>{
-                
+                // adiciona com jQuery
+                $('#lista1').append('<li>Novo item adicionado com jQuery</li>')
+                $('#lista2').prepend('<div>Item 0</div>')
+                $('#lista1').after('<li>Novo item adicionado com jQuery</li>')
+                $('#lista2').before('<div>Item 0</div>')
            })
         </script>
     </head>
 
     <body>
-       
+       <ul id="lista1">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+       </ul>
+
+       <div id="lista2">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+       </div>
+       <hr id="linha">
     </body>
 </html>
