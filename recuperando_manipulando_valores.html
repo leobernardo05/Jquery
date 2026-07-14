@@ -6,8 +6,11 @@
         <title>Estudo jQuery</title>
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
         <script>
+            //scirpt jQuery    
            $(document).ready(()=>{
-                
+                $.each($('.interesse:checked'), (indice,valor) => {
+                    console.log(indice, valor)
+                })
            })
         </script>
     </head>
