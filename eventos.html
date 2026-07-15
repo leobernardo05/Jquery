@@ -68,6 +68,22 @@
                     $('#resultadoDiv1').html('saiu')
                 })
 
+                // --------- teclado ---------
+                /*$('#teclado').keydown(() =>{
+                    $('#resultadoTeclado').html('Tecla pressionada')
+                })*/
+               /*$('#teclado').keyup(() => {
+                    $('#resultadoTeclado').html('Tecla liberada')
+                    console.log('tecla liberada')
+                })*/
+               $('#teclado').keyup((e) => {
+                    $('#resultadoTeclado').html('Tecla liberada')
+                    if(e.keyCode == 13){
+                        let txt = $(e.target).val()
+                        $('#resultadoTeclado').html(txt)
+                    }
+                })
+
             });
         </script>
     </head>
@@ -97,6 +113,9 @@
 
            <h3>Teclado</h3>
            <span>Nome:</span>
+           <input type="text" id="teclado">
+           <span id="resultadoTeclado">Resultado do evento sobre o input</span>
+
        </div>
     </body>
 </html>
