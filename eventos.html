@@ -23,6 +23,37 @@
                     $(this).css('background-color', 'blue')
                })
 
+                //------ mouse -----
+                $('#btn1').mousedown(()=>{
+                    $('#div2').css('background-color', 'pink')
+                })
+
+                $('#btn1').mouseup(()=>{
+                    $('#div2').css('background-color', 'green')
+                })
+
+                $('#btn1').click(()=>{
+                    $('#div2').css('background-color', 'yellow')
+                })
+
+                $('#btn2').dblclick(() => {
+                    $('#div2').css('background-color', 'purple')
+                })
+
+                $('#div2').mousemove((e) => {
+                    // capturando 
+                    console.log(e)
+                    $('#resultadoDiv1: ').html('X: ' + e.offsetX + ' / Y: ' + e.offsetY)
+                })
+
+                // $('#divExterna').mouseover(()=>{
+                //     $('#resultadoDiv1').html('entrou')
+                // })
+
+                $('#divExterna').mouseenter(()=>{
+                    $('#resultadoDiv1').html('entrou')
+                })
+
             });
         </script>
     </head>
@@ -41,10 +72,13 @@
            <hr/>
 
            <h3>Mouse</h3>
-           <button type="button">Clique aqui</button>
+           <button id="btn1" type="button">Clique aqui</button>
            <button type="button">Clique aqui 2x</button>
-           <div style="background-color: red; width: 80px; height: 50px; margin: 0;"></div>
+           <div id="div2" style="background-color: red; width: 80px; height: 50px; margin: 0;"></div>
            <span>Resultado do evento sobre a div</span>
+            <div id="divExterna" style="background-color: gray; width: 80px; height: 50px; margin: 0;"></div>
+            <div>Resultado: </div><span id="resultadoDiv1">?</span>
+
            <hr>
 
            <h3>Teclado</h3>
