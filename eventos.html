@@ -50,8 +50,22 @@
                 //     $('#resultadoDiv1').html('entrou')
                 // })
 
-                $('#divExterna').mouseenter(()=>{
+                /*$('#divExterna').mouseenter(()=>{
                     $('#resultadoDiv1').html('entrou')
+                })*/
+
+                /*$('#divExterna').mouseleave(()=>{
+                    $('#resultadoDiv1').html('saiu')
+                })*/
+
+                /*$('#divExterna').mouseout(()=>{
+                    $('#resultadoDiv1').html('saiu')
+                })*/
+
+                $('#divExterna').hover(()=>{
+                    $('#resultadoDiv1').html('entrou')
+                }, ()=>{
+                    $('#resultadoDiv1').html('saiu')
                 })
 
             });
