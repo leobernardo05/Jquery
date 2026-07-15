@@ -8,7 +8,21 @@
         <script>
             //scirpt jQuery    
            $(document).ready(() => {
-               
+               $('#onload').html('Pagina carregada')
+
+               $(window).scroll(()=>{
+                    $('#scroll').html('Scroll acionado')
+               })
+
+               $(window).resize(()=>{
+                    $('#xyz').html('Pagina redimensionada').css('background-color', 'red')
+               })
+
+                //function / arrow function    
+               $('#div1').scroll(function(){
+                    $(this).css('background-color', 'blue')
+               })
+
             });
         </script>
     </head>
@@ -17,10 +31,24 @@
        <div id="topo">
             <h1>Eventos</h1>
        </div>
-        
-       <div>
-           
 
+       <div>
+           <h3>Browser</h3>
+           <span>Onload: </span><span id="onload">?</span><br>
+           <span>Scroll: </span><span id="scroll">?</span><br>
+           <span>Window: </span><span id="xyz">?</span>
+           <div style="height: 100px; height: 100px; border: solid 1px; overflow-y: scroll;"></div>
+           <hr/>
+
+           <h3>Mouse</h3>
+           <button type="button">Clique aqui</button>
+           <button type="button">Clique aqui 2x</button>
+           <div style="background-color: red; width: 80px; height: 50px; margin: 0;"></div>
+           <span>Resultado do evento sobre a div</span>
+           <hr>
+
+           <h3>Teclado</h3>
+           <span>Nome:</span>
        </div>
     </body>
 </html>
