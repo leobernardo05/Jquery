@@ -87,12 +87,13 @@
                 })*/
 
                 // ----- formulario --------
-               $('#nome').focus((e) => {
+               $('#nome', 'email').focus((e) => {
                     console.log('Esse elemento HTML recebeu o foco')
                     $(e.target)
                })
 
-               $('#email').focus((e) => {
+                //colocando em multiplos parametros    
+               $('#email', '#nome').focus((e) => {
                     console.log('Esse elemento HTML recebeu o foco')
                     $(e.target)
                })
