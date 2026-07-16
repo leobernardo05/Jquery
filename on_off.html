@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Estudo jQuery</title>
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script>
+            //scirpt jQuery    
+            // executar apos o corregamento completo da pagina
+           $(document).ready(() => {
+                  $('input').on('focus', () =>{
+                        $('e.target').removeClass('desfocado')
+                        $('e.target').addClass('desfocado')
+                  })
+
+                  $('input').on('blur', () =>{
+                        $('e.target').removeClass('desfocado')
+                        $('e.target').addClass('desfocado')
+                  })
+
+                  $('body').append('<br/><br/><input type="text" class="desfocado">')
+            });
+        </script>
+    </head>
+
+    <body>
+        <input type="text" class="desfocado">
+    </body>
+</html>
