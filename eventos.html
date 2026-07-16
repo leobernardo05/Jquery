@@ -85,9 +85,27 @@
                         $(e.target).val('')
                     }
                 })*/
-               $('#nome').focus(() => {
+
+                // ----- formulario --------
+               $('#nome').focus((e) => {
                     console.log('Esse elemento HTML recebeu o foco')
+                    $(e.target)
                })
+
+               $('#email').focus((e) => {
+                    console.log('Esse elemento HTML recebeu o foco')
+                    $(e.target)
+               })
+
+               $('#nome').blur((e) => {
+                    console.log('Esse elemento HTML recebeu o foco')
+                    $(e.target).addClass('inputFocado')
+               })
+
+               $('#email').blur((e) => {
+                    console.log('Esse elemento HTML recebeu o foco')
+                    $(e.target).addClass('Esse elemento HTML perdeu o foco')
+                })
 
 
             });
