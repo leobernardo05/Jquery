@@ -81,6 +81,7 @@
                     if(e.keyCode == 13){
                         let txt = $(e.target).val()
                         $('#resultadoTeclado').html(txt)
+                        $(e.target).val('')
                     }
                 })
 
