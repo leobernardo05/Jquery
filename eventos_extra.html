@@ -5,16 +5,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Estudo jQuery</title>
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <style>
+            #div1{
+                width: 100px;
+                height: 100px;
+                background-color: blueviolet;
+            }
+            .emDestaque {
+                background-color: yellow;
+            }
+        </style>
         <script>
             //scirpt jQuery    
             // executar apos o corregamento completo da pagina
            $(document).ready(() => {
-                
+                $('#btn2').on('click', () => {
+                    alert('BTN 2 clicado');
+                })
+
+                $('$bnt1').on('click', () =>{
+                    $('#btn2').trigger('click')
+                })
+
+                $('#div1').hover(func1, func2)
+
+                $('#div1').on('mouseenter', (e)=> {
+                    $(e.target).addClass('emDestaque')
+                })
+
+                $('#div1').on('mouseleave', (e)=> {
+                    $(e.target).removeClass('emDestaque')
+                })
             });
         </script>
     </head>
 
     <body>
-        
+        <button id="btn1">BTN 1</button>
+        <button id="btn2">BTN 2</button>
+
+        <hr>
+        <div id="div1"></div>
     </body>
 </html>
