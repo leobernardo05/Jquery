@@ -76,6 +76,7 @@
                     $('#resultadoTeclado').html('Tecla liberada')
                     console.log('tecla liberada')
                 })*/
+               /*
                $('#teclado').keyup((e) => {
                     $('#resultadoTeclado').html('Tecla liberada')
                     if(e.keyCode == 13){
@@ -83,7 +84,11 @@
                         $('#resultadoTeclado').html(txt)
                         $(e.target).val('')
                     }
-                })
+                })*/
+               $('#nome').focus(() => {
+                    console.log('Esse elemento HTML recebeu o foco')
+               })
+
 
             });
         </script>
@@ -116,6 +121,22 @@
            <span>Nome:</span>
            <input type="text" id="teclado">
            <span id="resultadoTeclado">Resultado do evento sobre o input</span>
+
+           <h3>Formulario: </h3>
+           <form action="">
+                <span>Nome:</span>
+                <input type="text" id="nome">
+
+                <span>Email:</span>
+                <input type="text" id="email">
+
+                <span>Motivo do contato</span>
+                <select name="motivo" id="motivo">
+                    <option value="1">Dúvida</option>
+                    <option value="2">Sugestão</option>
+                    <option value="3">Reclamação</option>
+                </select>
+           </form>
 
        </div>
     </body>
