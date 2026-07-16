@@ -36,6 +36,10 @@
                 $('#div1').on('mouseleave', (e)=> {
                     $(e.target).removeClass('emDestaque')
                 })
+
+                $('#div1').hover(
+                    e => $(e.target).toggleClass('emDestaque')
+                )
             });
         </script>
     </head>
