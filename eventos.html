@@ -107,6 +107,15 @@
                     $(e.target).addClass('Esse elemento HTML perdeu o foco')
                 })
 
+               $('#opcao').change((e) => {
+                    console.log('opção foi modificada')
+                })
+
+               $('#form').submit((e) => {
+                    e.preventDefault()    
+                    console.log('opção foi modificada')
+                })
+
 
             });
         </script>
