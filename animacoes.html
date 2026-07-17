@@ -5,20 +5,42 @@
 		<title>jQuery</title>
 
 		<style>
-			
+			.div{
+                width: 80px;
+                height: 80px;
+                border:solid 1px #000;
+                background-color: gray;
+            }
 		</style>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script>
 			$(document).ready(() => {
-				
-				
+				$('button').on('click', () => {
+                    $('div').animate({
+                        'width' : '160px',
+                        'height' : '160px',
+                        'background-color' : 'red',
+                        'margin-left' : '200px',
+                        'margin-top' : '200px',
+                        'border-radius' : '5px'
+                    },
+                    {
+                        duration: 1500,
+                        start: () =>{
+                            console.log('animação iniciada')
+                        }
+                    })
+                })
+                
 			})
 		</script>
 	</head>
 
 	<body>
-		
+
+		<button type="button">iniciar animação</button>
+        <div class="div"></div>
 			
 	</body>
 
